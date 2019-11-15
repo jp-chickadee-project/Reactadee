@@ -1,0 +1,3 @@
+[submodule "src/modules/NMUBaseReactPage"]
+	path = src/modules/NMUBaseReactPage
+	url = https://github.com/ryjohnson92/NMUBaseReactPage
