@@ -1,12 +1,9 @@
 import React from 'react';
 import Main from './modules/NMUBaseReactPage/main';
+import BirdForm from './jaredComps/birdForm/index';
 const pages = {
-    home:<a>hello</a>,
-    contanct:<a>world</a>,
-    store:<a>this</a>,
-    help:<a>is</a>
+    addBird: <BirdForm />
 }
-const content = <a>Contents</a>;
 function App() {
   return (<Main pages={pages}/>
   );
