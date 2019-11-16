@@ -2,7 +2,7 @@ import React from 'react';
 import Main from './modules/NMUBaseReactPage/main';
 import BirdForm from './jaredComps/birdForm/index';
 const pages = {
-    addBird: <BirdForm />
+    'Add Bird': <BirdForm/>
 }
 function App() {
   return (<Main pages={pages}/>
