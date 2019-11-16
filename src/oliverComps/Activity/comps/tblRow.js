@@ -2,28 +2,31 @@ import React, { Component } from 'react';
 class tblRow extends Component {
     state = {  }
     render() { 
-        let rowStyle = {
-            width: '100%',
-            textAlign: (typeof this.props.textAlign !== 'undefined')? this.props.textAlign: 'center'
-        }
-        let lcell = {
-            width: '50%',
-            float: 'left'
-        }
-        let rcell = {
-            width: '50%',
-            float: 'right'
-        }
         return ( 
-            this.buildRows(this.props.rowContent)
+            <div>
+                {this.buildRows(this.props.rowContent)}
+            </div>
+            
          );
     }
 
     buildRows(column){
-        let keys = Object.keys(column);
-        return <div>
+        
+        let keys = Object.values(column);
+        let width = window.screen.width / keys.length;
+        return <div style={{
+               
+        }}>
+            
+            
             {keys.map(cell=>
-                <div>{column[cell]}</div>
+                <div style={{
+                   
+                    display: 'inline-block',
+                    width: '15%',
+                    textAlign: 'center',
+                    
+                }}>{cell}</div>
             )}
         </div>
     }
