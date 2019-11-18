@@ -23,8 +23,9 @@ class tblRow extends Component {
                 <div style={{
                    
                     display: 'inline-block',
-                    width: '15%',
+                    width: width,
                     textAlign: 'center',
+                    
                     
                 }}>{cell}</div>
             )}

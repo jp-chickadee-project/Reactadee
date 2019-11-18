@@ -9,7 +9,15 @@ let example ={
     "bandCombo": "#a0/V",  
 }
 
+let options = { Today: 'Today',
+                Week:'This Week',
+                Month:'This Month',
+                Year:'This Year'
+                };
+
 let headers = Object.keys(example);
+var date = new Date(1492873308*1000);
+console.log(date.getMonth())
 example = (()=>{
     let arr = [];
     for(let i = 0; i < 50; i++){
@@ -20,23 +28,32 @@ example = (()=>{
 class Table extends Component {
     state = {  }
     render() { 
-        console.log(headers);
+        
         return ( 
             <div style={{
-               
+               width: '100%',
+               height: '100%'
             }}>
-                
                 <div style={{
-                    backgroundColor: 'white',
-                    position: 'sticky'
+                    height: '8%'
+                }}>{this.buildOptions(options)}</div>
+                <div style={{
                 }}>{this.buildHeaders(headers)}</div>
-                <div style={{
-                    overflowY: 'scroll'
-                    
+                <div style={{   
                 }}>{this.buildTable(example)}</div>
                 
             </div>
          );
+    }
+
+    buildOptions(options){
+        let width = 
+        |        
+          
+    }
+
+    renderTable(content){
+
     }
 
     buildTable(content){
@@ -50,7 +67,7 @@ class Table extends Component {
         return headers.map(item =>{
             return <div style={{
                 display: 'inline-block',
-                width: '15%',
+                width: width,
                 fontSize: '150%',
                 textAlign: 'center'
             }}>{item}</div>
