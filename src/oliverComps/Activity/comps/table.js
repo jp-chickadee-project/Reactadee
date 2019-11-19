@@ -13,7 +13,7 @@ let example ={
     "bandCombo": "#a0/V",  
 }
 
-let options = ['Today','This Month','This Year'];
+let options = ['Today','This Week','This Month','This Year'];
 
 let headers = Object.keys(example);
 example = (()=>{
@@ -37,7 +37,7 @@ class Table extends Component {
                 }}>{this.buildOptions(options)}</div>
                 <div style={{
                 }}>{this.buildHeaders(headers)}</div>
-                <div style={{   
+                <div id='tableDiv' style={{   
                 }}>{this.buildTable(example)}</div>
                 
             </div>
@@ -83,8 +83,9 @@ class Table extends Component {
                 if(nowMonth === month && nowDay === day && nowYear === year){
                     sendData.push(element);
                 }
-            });
-            
+                
+            }); 
+            console.log(sendData);  
         }
         else if(content === 'This Month'){
             example.forEach(element => {
@@ -105,9 +106,7 @@ class Table extends Component {
                 }
             });
         }
-        return this.buildTable(sendData);
-
-        
+        document.getElementById("tableDiv").innerHTML = this.buildTable(sendData);
    }
 
     buildTable(content){
