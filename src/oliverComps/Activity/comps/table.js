@@ -84,8 +84,7 @@ class Table extends Component {
                     sendData.push(element);
                 }
                 
-            }); 
-            console.log(sendData);  
+            });   
         }
         else if(content === 'This Month'){
             example.forEach(element => {
@@ -106,6 +105,7 @@ class Table extends Component {
                 }
             });
         }
+        console.log(sendData)
         document.getElementById("tableDiv").innerHTML = this.buildTable(sendData);
    }
 
