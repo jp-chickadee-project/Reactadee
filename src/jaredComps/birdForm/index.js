@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Form from './subComps/form';
+import Example from './subComps/example';
 class BirdForm extends Component {
-    state = {  }
+    state = { 
+        data : new Example()
+     }
     render() { 
         return ( 
             <div style ={{
@@ -9,7 +12,7 @@ class BirdForm extends Component {
                 height : '100%',
                 backgroundColor: '#a3a3a3'
             }}>
-                <Form></Form>
+                <Form template={this.state.data}></Form>
             
             </div>
          );

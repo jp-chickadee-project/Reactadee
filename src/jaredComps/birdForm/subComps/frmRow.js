@@ -4,7 +4,7 @@ import React, { Component } from 'react';
  * @prop {value} value - The form input default value
  * @prop {text} textAlign - #optional 
  * */
-class FrmRow extends Component {
+class FrmRow extends Component{
     state = {  }
     render() { 
         let rowStyle = {
