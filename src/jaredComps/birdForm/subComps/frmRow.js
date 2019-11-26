@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Input from './input';
 /**
  * @prop {text} text - form input text
  * @prop {value} value - The form input default value
@@ -7,6 +8,7 @@ import React, { Component } from 'react';
 class FrmRow extends Component{
     state = {  }
     render() { 
+        let key = this.props.text;
         let rowStyle = {
             width : '100%',
             textAlign : (typeof this.props.textAlign !== 'undefined')? this.props.textAlign:'center' 
@@ -26,7 +28,7 @@ class FrmRow extends Component{
 
                 </div>
                 <div style={rCell}>{/*right cell */}
-                <input style ={{width :'100%'}} type = 'text' value = {this.props.value}></input>
+                <Input update = {this.props.updateData} text = {key} value = {this.props.value}></Input>
                 </div>
                
             </div>
